@@ -58,3 +58,16 @@ h1{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+h2{
+    margin-top: 10px;
+    color: gray;
+    padding-left: 30px;
+}
+button{
+    margin-top: 20px;
+    height: 5vh;
+    width: 10vw;
+    background-color: orange;
+    color: aliceblue;
+    border-radius: 10px;
+}
