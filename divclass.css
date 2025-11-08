@@ -1,0 +1,43 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            justify-content: center;
+        }
+        #one,#three,#five{
+            font-style: italic;
+        }
+        .head {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #one {
+            background-color: powderblue;
+            text-align: center ;
+        }
+        #two {
+            background-color: black;
+            color: red;
+            text-align: center ;
+        }
+        #three {
+            background-color: green;
+            color: white;
+            text-align: center ;
+        }
+        #four {
+            background-color: yellow;
+            color: blue;
+            text-align: center ;
+        }
+        #five {
+            background-color: pink;
+            color: purple;
+            text-align: center ;
+        }
+        div {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 30px;
+        }
+        
