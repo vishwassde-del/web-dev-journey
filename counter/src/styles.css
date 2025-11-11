@@ -36,6 +36,10 @@ button:hover{
     background-color: black;
     transform: scale(1.15);
 }
+span{
+    font-weight: bold;
+    color: #555;
+}
 .cn2{
     text-align: center;
     
