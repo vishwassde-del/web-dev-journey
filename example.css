@@ -1,0 +1,18 @@
+#emp{
+      width:100%;
+      border: 1px solid lightblue;
+      border-collapse: collapse;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: small;
+    }
+    th{
+      color: white;
+      background-color: rgb(246, 92, 92);
+    }
+    tr:nth-child(even){
+      background-color: rgb(243, 216, 166);
+    }
+    tr:hover{
+      background-color: rgb(187, 187, 245);
+    }
