@@ -21,7 +21,7 @@ const Rmap = () => {
         <img src='/' alt='xyz' style={{width:"100px"}} className='images'></img>
 
         {/*ternary*/}
-        {isLoggedIn?<h2>Welecome back</h2>:<h2>Please Log In</h2>}
+        {isLoggedIn?<h2>Welcome back</h2>:<h2>Please Log In</h2>}
         </center>
 
         </>
