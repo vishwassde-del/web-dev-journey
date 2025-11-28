@@ -1,0 +1,132 @@
+
+        #grandparent{
+            height:1000px;
+            border-radius: 30px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-size: contain;
+            background-image: linear-gradient(to bottom right,white,rgb(230, 240, 97));
+        }
+        #parent1,#parent2{
+            height: 500px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #child1,#child2,#child3,#child4,#child5,#child6{
+            width: 400px;
+            height: 200px;
+            background-size: contain;
+            box-shadow: 0 0 50px lightgrey;
+        }
+        #child1 {
+    border-radius: 20px;
+    background-image: linear-gradient(
+        to bottom,
+        orange 33.33%,
+        white 33.33% 66.66%,
+        green 66.66%
+    );
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    position: relative;
+    }
+    #chakra {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/027/384/142/original/blue-ashoka-wheel-indian-symbol-ashoka-chakra-png.png");
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+    #child2 {
+        background: linear-gradient(to bottom right, #FFCE00 50%, #FF6719 50%);
+        border-radius: 20px;
+        display: flex;
+    justify-content: center; 
+    align-items: center;     
+    position: relative;
+    
+    }
+    #dragon{
+        width : 300px;
+        height :200px;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9e/Dragon_of_Bhutan.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #child3 {
+        background: linear-gradient(
+    to bottom,
+    white 0% 15%,     /* top white */
+    #0038b8 15% 30%,  /* top blue stripe */
+    white 30% 70%,    /* middle white */
+    #0038b8 70% 85%,  /* bottom blue stripe */
+    white 85% 100%    /* bottom white */
+  );border-radius: 20px;
+        display: flex;
+    justify-content: center; 
+    align-items: center;     
+    position: relative;
+    
+    }
+    #star{
+        width : 100px;
+        height :80px;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Star_of_David.svg/1200px-Star_of_David.svg.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #child4 {
+        background: linear-gradient(
+    to right,
+    #4997d0 0% 33.33%,   /* left sky blue */
+    white 33.33% 66.66%, /* middle white */
+    #4997d0 66.66% 100%);
+  border-radius: 20px;
+        display: flex;
+    justify-content: center; 
+    align-items: center;     
+    position: relative;
+    
+    }
+    #parrot{
+        width : 100px;
+        height :80px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSedjqSA4tXeKK9Ex-GW71iUgQf3rRSYCQGTA&s");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #child5 {
+        background: linear-gradient(red);
+        border-radius: 20px;
+        display: flex;
+    position: relative;
+    }
+    #stars{
+        width : 180px;
+        height : 100px;
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Stars_of_China.svg/647px-Stars_of_China.svg.png?20230810130013");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+    #child6 {
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    #symbol{
+        height:110px;
+        width:110px;
+        border-radius: 50%;
+        background-color: #B6002C;
+    }
