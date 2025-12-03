@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login page...</h1>
+    <input type="text" placeholder="username" id="username">
+    <br><br>
+    <input type="password" placeholder="password" id="password">
+    <br><br>
+    <button onclick="login()">login</button>
+    <script>
+ function login(){        
+        let username=document.getElementById("username").value
+        let password=document.getElementById("password").value
+
+        let storedusername=localStorage.getItem("username")
+        let storedpassword=localStorage.getItem("password")
+
+        if(username===storedusername && password===storedpassword){
+            alert("login successfull...")
+        }else{
+            console.warn("invalid credientials...")
+        }}
+    </script>
+</body>
+</html>
