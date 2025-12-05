@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        nav{
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: linear-gradient(to right, white, #05f629);
+
+        }
+        #menu,#search{
+            display: inline-block;
+            height: 100%;
+            width:50%;
+        }
+        #menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li{
+            display: inline;
+            margin: 20px;
+        }
+        li a{
+            text-decoration: none;
+            color:black;        
+        }
+        #search .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        #s{
+            border-radius: 20px;
+            border:none
+        }
+        #b{
+            border-radius: 20px;
+            border:none
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="menu">
+            <ol>
+                <li><a href="">HOME</a></li>
+                <li><a href="">LOGIN</a></li>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">OTHERS</a></li>
+            </ol>
+        </div>
+        <div id="search">
+            <div class="container"> <input  id="s" type="text" placeholder="      Search here">
+            <button id ="b" type="button">Search</button></div>
+        </div>
+    </nav>
+</body>
+</html>
