@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      background: linear-gradient(90deg, #000000, #434343);
+    }
+
+    #logo {
+      width: 100px;
+      height: 60px;
+      background-image: url("https://media.about.nike.com/image-downloads/cf68f541-fc92-4373-91cb-086ae0fe2f88/002-nike-logos-swoosh-white.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #menu {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu ol {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      align-items: center;
+      width: 60%;
+    }
+
+    #menu li {
+      display: inline-block;
+    }
+
+    #menu li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    #right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      color: white;
+    }
+
+    #search {
+      height: 30px;
+      width: 200px;
+      border: none;
+      border-radius: 15px;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div id="logo"></div>
+    <div id="menu">
+      <ol>
+        <li><a href="">New</a></li>
+        <li><a href="">Men</a></li>
+        <li><a href="">Women</a></li>
+        <li><a href="">Kids</a></li>
+        <li><a href="">Sale</a></li>
+      </ol>
+    </div>
+    <div id="right">
+      <input type="text" id="search" placeholder="Search">
+    </div>
+  </nav>
+</body>
+</html>
