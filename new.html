@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let ul=document.createElement("ul")
+        let container=document.getElementById("container")
+        let items=["one","two","three","four","five"]
+        for(i=0;i<items.length;i++)
+    {
+        let li=document.createElement("li")
+        li.innerText=items[i]
+        ul.append(li)
+    }
+
+    container.append(ul)
+    </script>
+    
+</body>
+</html>
