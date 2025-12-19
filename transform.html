@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transform Examples</title>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: rgb(218, 240, 15);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      transition: transform 0.8s ease-in-out;
+      border: 2px solid black;
+    }
+
+    /* Individual transforms */
+    .translate:hover {
+      transform: translate(200px, 300px);
+    }
+
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+
+    .scale:hover {
+      transform: scale(1.5, 1.2);
+    }
+
+    .skew:hover {
+      transform: skew(20deg, 10deg);
+    }
+
+    .combo:hover {
+      transform: translate(30px, 30px) rotate(30deg) scale(1.2) skew(10deg, 5deg);
+    }
+    .boxing:hover {
+  transform: translate(50px, 50px) rotate(45deg) scale(1.5);
+}
+  </style>
+</head>
+<body>
+  <div class="box translate">Translate</div>
+  <div class="box rotate">Rotate</div>
+  <div class="box scale">Scale</div>
+  <div class="box skew">Skew</div>
+  <div class="box combo">Combo</div>
+  <div class="box boxing">Combo2</div>
+</body>
+</html>
