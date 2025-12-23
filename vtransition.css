@@ -1,0 +1,19 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin:20px;
+    padding:30px;
+}
+
+.one{
+    background-color: orange;
+    transition-property:width, height, background-color;
+    transition-duration:2s;
+    transition-delay: 2s;
+
+}
+.one:hover{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
