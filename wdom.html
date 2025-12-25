@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="username" for="btn" placeholder="user name">
+    <button id="btn" onclick=onc()>button</button>
+    <script>
+   function onc() {
+    let b=document.getElementById("btn")
+    b.addEventListener("click",()=>{
+        console.log("first function");
+    })
+    b.addEventListener("mouseover",()=>{
+        console.log("second function");
+    })
+
+    let i=document.getElementById("username")
+    i.addEventListener("keydown",(e)=>{
+        if(e.key ==='k'){
+        console.log("correct !");}
+        else{
+            console.log("incorrect !")
+        }
+    })
+    
+    
+    </script>
+</body>
+</html>
