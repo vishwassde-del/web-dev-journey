@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        transition: background-color 1s ease; 
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .corner{
+        height: 370px;
+        width: 400px;
+        font-size: 40px;
+    }
+    #c1{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 260px;
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    #c2{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 15px;
+        padding-top: 180px;
+        padding-left: 10px;
+        line-height: 1.5;
+    }
+    #c3{
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-size: 15px;
+        padding-top: 33px;
+        padding-left: 220px;
+    }
+    #c4{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 15px;
+        padding-top: 220px;
+        padding-left: 330px;
+    }
+    ul{
+        list-style: none;
+    }
+    .slides{
+        height: 800px;
+        width: 400px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    img
+    {
+        height: 100%;
+        width: 100%;
+    }
+    p{
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.5;
+        padding-top: 10px;
+        color: white;
+        font-weight: bolder;
+        padding-bottom: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateY(-20px);
+  margin-bottom: 40px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="c1" class="corner" ><img src="https://backstagetalks.com/img/logo.png"></div>
+    <div id="c2" class="corner"><pre><b>
+Backstage Talks is a magazine of casual,
+but in depth dialogues on design and business. Our 
+decisions shape and influence this complex world to 
+have a chance to make the right ones, we need to talk.
+© Vishwas Html0.3
+<u>
+Privacy Policy</u>
+</b></pre></div>
+    <div id="c3" class="corner"><a href="#">Vishwas@backstagetalks</a></div>
+    <div id="c4" class="corner"><ul>
+        <li># issue 8</li>
+        <li># issue 7</li>
+        <li># issue 6</li>
+        <li># issue 5</li>
+        <li># issue 4</li>
+        <li># issue 3</li>
+        <li># issue 2</li>
+        <li># issue 1</li>
+    </ul></div>
+    <div id="firstslide" class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_8.png">
+        <p>Issue #8<br>BUY HERE<br>or in selected stores</p>
+    </div>
+
+    </div><br>
+    <div id="secondslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_7.png">
+        <p>Issue #7<br>BUY HERE  (Europe)<br>BUY HERE  (UK & Overseas)<br>or in selected stores</p></div>
+    </div><br>
+    <div id="thirdslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_6.png">
+        <p style="color: black;">Issue #6<br>BUY HERE<br>or in selected stores.</p>
+        </div>
+    </div><br>
+    <div id="fourthslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_5.png">
+        <p>Issue #5<br>BUY HERE<br>or in selected stores.</p></div>
+    </div><br>
+    <div id="fifthslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_4.png">
+        <p>Issue #4 <br>is sold out.<br>If you are lucky, you may get the last pieces in selected stores</p></div>
+    </div><br>
+    <div id="sixthslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover_issue_3.png">
+        <p>Issue #3 <br>is sold out.<br>If you are lucky, you may get the last pieces in selected stores.</p></div>
+    </div><br>
+    <div id="seventhslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover2017.png">
+        <p>Issue #2<br>BUY HERE<br>or in selected stores.</p></div>
+    </div><br>
+    <div id="eighthslide"  class="slides">
+        <div><img src="https://backstagetalks.com/img/backstagetalks_cover2016_n.png">
+        <p>Issue #1<br>is sold out.<br>If you are lucky, you may get the last pieces in selected stores</p></div>
+    </div><br>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slides");
+  const slideArray = Array.from(slides);
+
+  const colors = {
+    firstslide: "#F6E0A4",   
+    secondslide: "#FF608C",  
+    thirdslide: "#FFFFFF",   
+    fourthslide: "#00C2B6", 
+    fifthslide: "#FB651A",   
+    sixthslide: "#FFBE00",  
+    seventhslide: "#1939BE", 
+    eighthslide: "#E30512" 
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.body.style.backgroundColor = colors[entry.target.id] || "white";
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  slides.forEach(slide => observer.observe(slide));
+
+  let currentIndex = 0;
+
+  function scrollToSlide(index) {
+    if (index >= 0 && index < slideArray.length) {
+      currentIndex = index;
+      slideArray[currentIndex].scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      scrollToSlide(currentIndex + 1);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      scrollToSlide(currentIndex - 1);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
