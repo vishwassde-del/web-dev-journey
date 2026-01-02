@@ -1,0 +1,22 @@
+t=(1,2,3)
+print(t)
+print(type(t))
+t1=(1,"2",3)
+print(t1)
+print(type(t1))
+t2=(1)
+print(t2)
+print(type(t2))
+t3=(1,)
+print(t3)
+print(type(t3))
+l=[1,2,3]
+l[1]=200
+print(l)
+print(t)
+#insertion and deletion in tuple
+z=(1,2,3,4,5)
+x=z[:2]+(2.5,)+z[2:]
+print(x)
+y=x[:2]+x[3:]
+print(y)
