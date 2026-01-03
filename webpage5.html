@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    nav{
+        height: 75px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top:0;
+    }
+    .navdiv{
+        height: 100%;
+        width: 20%;
+        
+    }
+    #d1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #d2{
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-style: none;
+        width: 30%;
+        margin: auto;
+    }
+    .nd{
+        width:25% ;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:auto;
+    }
+    #d3{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 50px;
+    }
+    #b1{
+        border: 2px solid #00B289;
+        color: #00B289;
+        border-radius: 5px;
+    }
+    #b2{
+        border: none;
+        background-color: #00B289;
+        color: white;
+        border-radius: 5px;
+    }
+    #main1{
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:start;
+    }
+    .m2{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #main2{
+        height: 650px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:start;
+    }
+    .cards{
+        height: 100%;
+        width: 25%;
+        margin-right: 20px;
+        box-shadow: 0 0 20px rgb(228, 227, 227);
+
+    }
+    .main3{
+        height: 100px;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin:  25px auto;
+    }
+    #main4{
+        height: 400px;
+        width: 80%;
+        margin:  auto;
+    }
+    .m4{
+        height: 30%;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgb(228, 227, 227);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .m44{
+        text-align: center;
+    }
+    .accordion-item{
+        width: 55%;
+        margin: auto;
+    }
+    #footer{
+        height: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .lists{
+        width: 25%;
+    }
+    li{
+        list-style: none;
+        line-height: 2pc;
+    }
+    .c1{
+        padding-left: 10px;
+    }
+    h3{
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+    hr{
+        width: 80%;
+        margin: auto;
+    }
+    #footer ol{
+        line-height: 1.5;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="d1" class="navdiv" style="font-size: 30px;">🔥 Bonsai</div>
+        <div  id="d2" class="navdiv">
+            <div class="nd">
+                <select style="border: none;">
+                    <option value="2022">Product</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option></select>
+            </div>
+            <div class="nd">
+                <select  style="border: none;">
+                    <option value="2022">Templates</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option></select>
+            </div>
+            <div class="nd">Pricing</div>
+            <div class="nd">Review</div>
+        </div>
+        <div id="d3" class="navdiv">
+            <div id="b1"class="button" style="width: 37%;height: 40px;">LOG IN</div>
+            <div id="b2"class="button" style="width: 37%;height: 40px;">START FREE</div>
+        </div>
+    </nav><br><br>
+    <div id="main1">
+        <div class="m2" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 50px;">Pricing & Plans</div>
+        <div class="m2" style="font-size: 20px;">Monthly or Yearly</div>
+    </div><br><br>
+    <div id="main2">
+    <div class="cards">
+        <h3>Starter</h3>
+        <div class="c1">
+            <p style="font-size: 15px;">Ideal for freelancers and contractors just starting out.</p>
+            <p style="font-size: 40px;"><sup>$</sup>24<sub>/month</sub></p>
+            <hr>
+        </div>
+        <ul>
+            <li>✔ Everything in Starter plus...</li>
+            <li>✔ Custom Branding</li>
+            <li>✔ Forms & Questionnaires</li>
+            <li>✔ Workflow Automations</li>
+            <li>✔ Client Portal</li>
+            <li>✔ Calendly Integration</li>
+            <li>✔ Zapier Integration</li>
+            <li>✔ Up to 15 Project Collaborators</li>
+        </ul>
+        <div id="b2" class="button" style="margin: auto;">START FREE</div>
+    </div>
+
+    <div class="cards">
+    <h3>Professional</h3>
+    <div class="c1">
+            <p style="font-size: 15px;">Everything a growing independent business needs to thrive.</p>
+            <p style="font-size: 40px;"><sup>$</sup>39<sub>/month</sub></p>
+            <hr>
+    </div>
+        <ul>
+            <li>✔ Everything in Starter plus...</li>
+            <li>✔ Custom Branding</li>
+            <li>✔ Forms & Questionnaires</li>
+            <li>✔ Workflow Automations</li>
+            <li>✔ Client Portal</li>
+            <li>✔ Calendly Integration</li>
+            <li>✔ Zapier Integration</li>
+            <li>✔ Up to 15 Project Collaborators</li>
+        </ul>
+        <div id="b2" class="button" style="margin: auto;">START FREE</div>
+    </div>
+
+    <div class="cards">
+        <h3>Business</h3>
+        <div class="c1">
+            <p style="font-size: 15px;">The perfect package for small businesses and agencies.</p>
+            <p style="font-size: 40px;"><sup>$</sup>79<sub>/month</sub></p>
+            <hr>
+        </div>
+        <ul>
+            <li>✔ Everything in Starter and Professional plus...</li>
+            <li>✔ Subcontractor Management</li>
+            <li>✔ Hiring Agreement Templates (1099 contracts)</li>
+            <li>✔ Subcontractor Onboarding</li>
+            <li>✔ Talent Pool</li>
+            <li>✔ 3 Team Seats (additional seats $9/month)</li>
+            <li>✔ Accountant Access</li>
+            <li>✔ Connect Multiple Bank Accounts</li>
+            <li>✔ Unlimited Subcontractors</li>
+            <li>✔ Unlimited Project Collaborators</li>
+        </ul>
+        <div id="b2" class="button" style="margin: auto;">START FREE</div>
+    </div>
+</div>
+
+    <div class="main3" style="font-size: 30px;font-family:Verdana, Geneva, Tahoma, sans-serif;">Super charge your work with add-on's</div>
+    <div id="main4">
+        <div class="m4">
+            <div class="m44"style="width: 80%;"><span>Collaborators</span><br>
+Invite other users to specific projects for limited access and functionality.</div>
+            <div class="m44" style="width: 20%;font-size: 30px;">Free</div>
+            
+        </div>
+        <div class="m4"><div class="m44"style="width: 80%;"><span>Partners</span><br>
+Invite other users for full account access and company management.</div>
+            <div class="m44" style="width: 20%;font-size: 30px;"><sup>$</sup>9<sub>/month</sub></div>
+            
+        </div>
+        <div class="m4"><div class="m44"style="width: 80%;"><span>Bonsai Tax</span><br>
+Track expenses, identify write-offs, and estimate quarterly taxes easily.</div>
+            <div class="m44" style="width: 20%;font-size: 30px;"><sup>$</sup>10<sub>/month</sub></div>
+            
+        </div></div>
+    </div>
+    <br><br><br>
+    <div class="main3"><p style="font-size: 40px; padding-right: 10px;">It’s your business.
+We’re here to help it grow.</p><div id="b2"class="button">START FREE</div></div>
+    <div class="main3" style="font-size: 30px; color: #00B289; font-weight: bolder;">Frequently asked question's</div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            How does the free trial work?
+        </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's Workflow or Workflow Plus Features! You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the subscription ends! If you wish to cancel at any time during the trial period, you can do so through your Subscriptions Settings Page.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Can I change plans anytime?
+        </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Yes, you can from within your account. If you have already subscribed to a plan, or want to downgrade or upgrade your current one, you can do this by going to your "Settings" and "Subscription".</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            How do I pause my Bonsai subscription?
+        </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">We totally understand that with the nature of freelancing, work ebbs and flows so you might not always need your Bonsai subscription to remain active! The good news is that you can cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll be able to continue logging in to access all your documents and even continue to use our free features, like Time Tracking! In order to cancel your subscription, login to your Bonsai account.</div>
+        </div>
+    </div>
+    </div><br><br><hr><br><br>
+    <div id="footer">
+        <div class="lists"><ul>
+  <li>Proposals</li>
+  <li>Contracts</li>
+  <li>Invoicing</li>
+  <li>Client CRM</li>
+  <li>Time Tracking</li>
+  <li>Task Tracking</li>
+  <li>Forms</li>
+  <li>Accounting</li>
+  <li>Bonsai Tax</li>
+  <li>Bonsai Cash</li>
+  <li>Pricing</li>
+  <li>Bonsai Reviews</li>
+</ul>
+</div>
+        <div class="lists"><ul>
+  <li>Freelance Resources</li>
+  <li>Freelance Blog by Bonsai</li>
+  <li>How to Write a Contract</li>
+  <li>Online Signature Maker</li>
+  <li>Self-Employed Taxes Hub</li>
+  <li>Self-Employed Tax Calculator</li>
+  <li>Self-Employed Tax Deductions</li>
+  
+      <li>Invoice Templates</li>
+          <li>Website Proposal Template</li>
+          <li>Digital Marketing Proposal Template</li>
+          <li>Social Media Marketing Proposal</li>
+          <li>Graphic Design Proposal</li>
+          <li>Freelance Proposal Template</li>
+          <li>SEO Proposal Template</li>     
+      </li>
+      <li>Contract Templates</li>
+      <li>Agreement Templates</li>
+      <li>Scope of Work Templates</li>
+      <li>Quote Templates</li>
+      <li>Credit Note Templates</li>
+      <li>Estimate Templates</li>
+      <li>Form Templates</li>
+    </ul>
+  </li>
+</ul>
+</div>
+        <div class="lists" style="margin-left: 100px;"><ul>
+  <li>About</li>
+  <li>Careers</li>
+  <li>Support</li>
+  <li>LinkedIn</li>
+  <li>Twitter</li>
+  <li>Privacy policy</li>
+  <li>Legal</li>
+  <li>Affiliates</li>
+  <li>Write for Us</li>
+  <li>Comparisons</li>
+</ul>
+</div>
+<div class="foo" style="padding-left: 40px;">
+            <li style="padding-top: 73%; font-size:35px;">🔥</li>
+            <li>@Vishwas Html0.5</li>
+            <li>Bonsai Corp , Inc.</li>
+            <li>All rights reserved</li>
+        </div>
+    </div><br><br><br><br><br>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
