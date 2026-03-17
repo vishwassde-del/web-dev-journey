@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+center {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+    width: 420px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+form textarea,
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+input[type="file"] {
+    background: #ffffff;
+}
+
+button {
+    margin: auto;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1aff00, #a8ff00);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+    </style>
+    
+</head>
+<body>
+    <center>
+        <h1>update candidate's profile</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+           <textarea name="bio" placeholder="enter bio" required></textarea><br>
+           <textarea name="address" placeholder="enter address" required></textarea><br>
+           <input type="text" name="city" placeholder="enter city" required><br>
+           <input type="text" name="state" placeholder="enter state" required><br>
+           <input type="file" name="image" ><br>
+           <button>Update</button>
+        
+    </form>
+    </center>
+</body>
+</html>

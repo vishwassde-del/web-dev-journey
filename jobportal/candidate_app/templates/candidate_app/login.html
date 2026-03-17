@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 45px 60px;
+      border-radius: 18px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      width: 380px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #00ffcc;
+      font-size: 32px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+    }
+
+    input::placeholder {
+      color: #cffff6;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1aff00, #a8ff00);
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #e0ffff;
+    }
+
+    p a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+
+    p a:hover {
+      color: #1aff00;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .login-card {
+        width: 90%;
+        padding: 35px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-card">
+    <h1>Candidate Login Page</h1>
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="Enter Username" required>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      <button type="submit">Login</button>
+      <p>Don't have an account?
+        <a href="{% url 'candidate_signup' %}">Sign up</a>
+      </p>
+    </form>
+  </div>
+
+</body>
+</html>

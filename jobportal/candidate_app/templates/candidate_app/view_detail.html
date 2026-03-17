@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Details</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .job-wrapper {
+      max-width: 700px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 45px;
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(10px);
+    }
+
+    .job-wrapper h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00ffcc;
+      font-size: 30px;
+    }
+
+    .job-wrapper img {
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .job-wrapper p {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .job-wrapper strong {
+      color: #1aff00;
+    }
+
+    /* ACTION BUTTONS */
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .actions a {
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .actions button,
+    .actions a:last-child {
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .actions button {
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .actions a:last-child {
+      background: linear-gradient(135deg, #1aff00, #a8ff00);
+      color: #000;
+      display: inline-block;
+    }
+
+    .actions button:hover,
+    .actions a:last-child:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .job-wrapper {
+        padding: 30px 25px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="job-wrapper">
+    <h2>Job Details</h2>
+
+    <img src="{{ job.company_image.url }}" width="200" height="200">
+
+    <p><strong>Company:</strong> {{ job.company_name }}</p>
+    <p><strong>Job Title:</strong> {{ job.job_title }}</p>
+    <p><strong>Description:</strong> {{ job.job_description }}</p>
+    <p><strong>Role:</strong> {{ job.job_role }}</p>
+    <p><strong>Location:</strong> {{ job.job_location }}</p>
+    <p><strong>Salary Range:</strong> {{ job.salary_range }}</p>
+
+    <div class="actions">
+      <a class="back-link" href="{% url 'candidate_dashboard' %}">
+        <button>Back</button>
+      </a>
+      <a href="{% url 'apply_job' job.id %}">Apply Now</a>
+    </div>
+  </div>
+
+</body>
+</html>

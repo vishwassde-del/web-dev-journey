@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Applications</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 40px;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00ffcc;
+      font-size: 36px;
+    }
+
+    .job_posted {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 28px 25px 30px;
+      border-radius: 18px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: linear-gradient(135deg, #1aff00, #a8ff00);
+      color: #000;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .card h2 span {
+      color: #00ffcc;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* APPROVE BUTTON */
+    .approve-btn {
+      margin-top: 18px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1aff00, #a8ff00);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .approve-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      body {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Candidate Applications</h1>
+
+  <div class="job_posted">
+    {% for i in jobs %}
+    <div class="card">
+      <div class="badge">NEW</div>
+
+      <h2>
+        <span>{{ i.candidate.name }}</span> applied for
+        <span>{{ i.job_detail.job_role }}</span>
+      </h2>
+
+      <p><b>Email:</b> {{ i.candidate.email }}</p>
+      <p><b>Phone:</b> {{ i.candidate.phone }}</p>
+
+      <a href="{% url 'approve' i.id %}">
+        <button class="approve-btn">Approve</button>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+</html>

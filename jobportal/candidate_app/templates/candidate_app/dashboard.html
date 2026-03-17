@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #00ffcc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #00ffcc;
+      font-size: 16px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #00ffcc;
+      color: #000;
+    }
+
+    .nav-links a.logout {
+      color: #ff6b6b;
+    }
+
+    .nav-links a.logout:hover {
+      background: #ff6b6b;
+      color: #000;
+    }
+
+    /* DASHBOARD */
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* JOBS */
+    .jobs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .job-card {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      border-radius: 14px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .job-card h3 {
+      margin-bottom: 10px;
+      color: #00ffcc;
+    }
+
+    .job-card h3 span {
+      color: #fff;
+      font-weight: normal;
+    }
+
+    .job-card p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1aff00, #a8ff00);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #a8ff00, #1aff00);
+    }
+
+    .no-jobs {
+      text-align: center;
+      font-size: 18px;
+      color: #ffcccc;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Job Portal</div>
+    <div class="nav-links">
+      <a href="{% url 'candidate_profile' %}">Profile</a>
+      <a href="{% url 'result' %}">My Applications</a>
+      <a href="{% url 'candidate_logout' %}" class="logout">Logout</a>
+      <!-- Add more buttons easily here -->
+    </div>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard">
+    {% csrf_token %}
+
+    <h2 class="welcome">Welcome to Dashboard, {{ username }}</h2>
+
+    <h2 class="section-title">Available Jobs</h2>
+
+    <div class="jobs-container">
+      {% for job in jobs %}
+      <div class="job-card">
+        <h3>{{ job.job_title }} <span>@ {{ job.company_name }}</span></h3>
+        <p><strong>Role:</strong> {{ job.job_role }}</p>
+        <p><strong>Location:</strong> {{ job.job_location }}</p>
+        <p><strong>Salary:</strong> {{ job.salary_range }}</p>
+        <p><strong>Posted:</strong> {{ job.job_posted }}</p>
+        <p><strong>Last Date:</strong> {{ job.last_date }}</p>
+        <a href="{% url 'view_detail' job.id %}">
+          <button>View</button>
+        </a>
+      </div>
+      {% empty %}
+      <p class="no-jobs">No jobs available at the moment.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #00ffcc;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #00ffcc;
+  font-size: 16px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #00ffcc;
+  color: #000;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 120px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0fefe;
+}
+
+.hero span {
+  font-style: italic;
+  font-size: 16px;
+  color: #b9ffff;
+}
+
+/* COMPANIES SECTION */
+.companies {
+  padding: 80px 60px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.companies h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #00ffcc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+.company-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.company-card img {
+  max-width: 130px;
+  max-height: 70px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.company-card:hover img {
+  filter: grayscale(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #b9ffff;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .companies {
+    padding: 50px 25px;
+    margin: 20px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">JobPortal</div>
+    <div class="nav-links">
+      <a href="{% url 'recruiter_login' %}">Admin</a>
+      <a href="{% url 'candidate_login' %}">Candidate</a>
+    </div>
+  </nav>
+
+  <!-- HERO / QUOTES -->
+  <section class="hero">
+    <h1>Build Your Career With Confidence</h1>
+    <p>
+      Discover thousands of opportunities from top companies.
+      Your future starts with one smart decision.
+    </p>
+    <span>“Success is where preparation and opportunity meet.”</span>
+  </section>
+
+  <!-- COMPANY LOGOS -->
+  <section class="companies">
+    <h2>Trusted by Leading Companies</h2>
+
+    <div class="grid">
+      <!-- Replace src with your company images -->
+      <div class="company-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe97x-KD2Pec_w_A8kf03rMHgg36NWaicFeQ&s" alt=""></div>
+      <div class="company-card"><img src="https://1000logos.net/wp-content/uploads/2021/09/Cognizant-Logo.jpg" alt=""></div>
+      <div class="company-card"><img src="https://upload.wikimedia.org/wikipedia/wikimania2007/6/63/GoogleLogo.jpg" alt=""></div>
+      <div class="company-card"><img src="https://1000logos.net/wp-content/uploads/2019/08/Deloitte-Logo.jpg" alt=""></div>
+      <div class="company-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIP5KTNtwE18A_XpYzFj5Usn-x2j0ZsyED2A&s" alt=""></div>
+      <div class="company-card"><img src="https://live.staticflickr.com/2903/14450002600_3752cc2c67_b.jpg" alt=""></div>
+
+      <div class="company-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqRde5Guj48ZQCn00CIVwFYYiYlWdEDDXFQ&s" alt=""></div>
+      <div class="company-card"><img src="https://i.pinimg.com/736x/0e/17/fe/0e17fe76530edd4bfbd378b2f83e912d.jpg" alt=""></div>
+      <div class="company-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmTNFyMbOb17tCo5hoPbeJvsnN4OUrnnEfBg&s" alt=""></div>
+      <div class="company-card"><img src="https://images.samsung.com/is/image/samsung/assets/us/about-us/brand/logo/mo/360_197_1.png?$720_N_PNG$" alt=""></div>
+      <div class="company-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyL1aT3ezKPEJrD8GN_M5S37xY1rJGHKYADw&s" alt=""></div>
+      <div class="company-card"><img src="https://static.vecteezy.com/system/resources/thumbnails/019/136/319/small/amazon-logo-amazon-icon-free-free-vector.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 JobPortal. Connecting Talent With Opportunity.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color: #00ffd5;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+form {
+    width: 420px;
+    margin: 30px auto;
+    background: #0b0f14;
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 255, 213, 0.35);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #1a1f2b;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+input::file-selector-button {
+    background: linear-gradient(135deg, #00ffd5, #00bfff);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00ffd5, #00bfff);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffd5;
+}
+
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Job Detail</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="text" name="company_name" placeholder="Enter company name" required><br>
+
+    <textarea name="company_address" placeholder="Enter company address" required></textarea><br>
+
+    <input type="file" name="company_image"><br>
+
+    <input type="text" name="job_role" placeholder="Enter job role" required><br>
+
+    <textarea name="job_description" placeholder="Enter job description" required></textarea><br>
+
+    <textarea name="skills_required" placeholder="Enter skills required" required></textarea><br>
+
+    <input type="text" name="salary_range" placeholder="Enter salary range" required><br>
+
+    <input type="text" name="experinece_required" placeholder="Enter experience required"><br>
+
+    <input type="text" name="qualification" placeholder="Enter qualification" required><br>
+
+    <input type="text" name="vacancy" placeholder="Enter number of vacancies" required><br>
+
+    <input type="text" name="job_location" placeholder="Enter job location" ><br>
+
+    <input type="text" name="employment_type" placeholder="Enter employment type (Full-time/Part-time)" required><br>
+
+    <input type="text" name="industry_type" placeholder="Enter industry type" required><br>
+
+    <input type="text" name="job_posted" placeholder="Job posted on" required><br>
+
+    <input type="text" name="last_date" placeholder="Last date to apply"><br>
+
+    <textarea name="hiring_process" placeholder="Enter hiring process" required></textarea><br>
+
+    <button type="submit">Post Job</button>
+    </form>
+
+    </center>
+
+</body>
+</html>
